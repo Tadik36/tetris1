@@ -128,6 +128,7 @@ const clearBlocks = () => {
     for (let i = 1; i < arena.length-2; i++) {
         let clear = 1;
 
+
         for (let j = 1; j < arena[i].length-1; j++) {
             if (!arena[i][j])
                 clear = 0;
@@ -140,10 +141,10 @@ const clearBlocks = () => {
 
             arena.splice(i, 1);
             arena.splice(1, 0, r);
+            score1 += 10
+            score.innerHTML=score1
 
         }
-        score1 += 10
-        score.innerHTML = score1
     }
 }
 
@@ -176,6 +177,7 @@ const initArena = () => {
 
     arena.push(r);
     arena.push(r);
+    score1= 0 ;
 }
 
 const gameOver = () => {
